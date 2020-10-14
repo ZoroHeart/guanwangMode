@@ -32,11 +32,14 @@ h3, h4, h5, h6 {
 input, button, select, textarea { 
     border-radius: 0px !important;
 }
+li{
+	list-style: none;
+}
 .timetable{background: #ff9818;padding: 5px 23px;}
 .timetable hr{
 	color:#fff;
 	padding-top: 29px;
-	margin-bottom: 20px !important;
+	margin-bottom: 10px !important;
 }
 .timetable dl{
 	color:#fff; 
@@ -52,28 +55,24 @@ input, button, select, textarea {
 	margin:0;	
 	padding:0;
 }
-ul.withArrow{
-	
-}
-ul.withArrow li{
-	
-}
+ul.withArrow{}
+ul.withArrow li{}
 ul.withArrow li span{
-	margin-right: 10px;
-	font-weight: 700;
-	color: #ff9818;
-	border: 1px solid;
-	padding: 4px 8px;
-	font-size: 11px;
-	border-radius: 50%;
-	height: 20px;
-	width: 20px;
+	margin-right: 10px;
+	font-weight: 700;
+	color: #ff9818;
+	border: 1px solid;
+	padding: 4px 8px;
+	font-size: 11px;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
 }
 .widget {
     color: #858585;
 }
 .row,.row-fluid {
-	margin-bottom:30px;
+	margin-bottom:20px;
 }
 
 .row .row,.row-fluid .row-fluid{
@@ -97,9 +96,9 @@ img.img-polaroid {
     margin-top: 10px;
 }
 .service-v1 h3{
-	font-size: 20px;
-	color: #ff9818;
-	font-weight: bold;
+	font-size: 20px;
+	color: #ff9818;
+	font-weight: bold;
 }
 .section-padding{
 	padding:50px 0;
@@ -218,7 +217,7 @@ header  .navbar-nav > li > a {
 
 .dropdown-menu li a:hover {
     color: #fff !important;
-    background: #3c3c3b !important;
+    background: #ff9818 !important;
 }
 
 header .nav .caret {
@@ -955,7 +954,7 @@ ul.link-list li{
 	padding:2px 0 2px 0;
 	list-style:none;
 }
-footer{background: #1d1d1d;}
+footer{background: #f0f0f2;}
 footer ul.link-list li a{
 	color: #8C8C8C;
 }
@@ -1168,7 +1167,8 @@ color: #222;
 	color:#fff;
 }
 .pricing-box-item.activeItem .pricing-heading h3 {
-	 color: #fff;
+	 
+color: #fff;
 }
 
 .pricing-box-item .pricing-heading h3 strong {
@@ -1267,8 +1267,8 @@ footer .widget .flickr_badge img {
 
   
 footer{
-	padding:50px 0 0 0;
-	color: #565656;
+	padding:20px 0 0 0;
+	color: #8c8c8c;
 }
 
 footer a {
@@ -1426,7 +1426,6 @@ article img.pull-right, article .align-right{
 	float:right;
 	margin:5px 0 15px 15px;
 }
- ============================= */
 
 .clear-marginbot{
 	margin-bottom:0;
