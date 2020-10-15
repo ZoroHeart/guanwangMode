@@ -9,15 +9,17 @@
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
+<!-- Vendor Styles -->
+<link href="css/magnific-popup.css" rel="stylesheet"> 
+<!-- Block Styles -->
 <link href="css/style.css" rel="stylesheet" />
+<link href="css/gallery-1.css" rel="stylesheet">
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
 	<style>
 		.contBoxs{
 			display: flex;
@@ -55,18 +57,6 @@
 			background: #f4f4f4;
 			padding: 20px 20px 10px 20px;
 			margin-bottom: 15px;
-		}
-		.zyywContCss{
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-		}
-		.zyywContCss li{
-			width: 33%;
-			background: #fff!important;
-		}
-		.zyywContCss li img{
-			width: 100%;
 		}
 	</style>
 </head>
@@ -118,19 +108,19 @@
 								<li><a href="pricing.html">产品展示</a></li>
 							</ul>
 						</li>
-						<li class="active">
-							<a href="contact.html" data-toggle="dropdown" class="dropdown-toggle">人才发展<b class="caret"></b></a>
+						<li><a href="contact.html" data-toggle="dropdown" class="dropdown-toggle">人才发展<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="contact.html">人才战略</a></li>
 								<li><a href="contact.html">招聘信息</a></li>
-							</ul>
-						</li>
-						<li><a href="djgz.html" data-toggle="dropdown" class="dropdown-toggle">党建工作<b class="caret"></b></a>
+							</ul></li>
+						<li class="active">
+							<a href="djgz.html" data-toggle="dropdown" class="dropdown-toggle">党建工作<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="djgz.html">党风廉政</a></li>
 								<li><a href="djgz.html">党建动态</a></li>
 								<li><a href="djgz.html">学习园地</a></li>
-							</ul></li>
+							</ul>
+						</li>
 						<li>
 							<a href="discloseInformation.html" data-toggle="dropdown" class="dropdown-toggle">信息公开<b class="caret"></b></a>
 							<ul class="dropdown-menu">
@@ -151,57 +141,42 @@
 
 	<section id="inner-headline">
 		<div style="width: 100%;">
-			<img src="img/slides/banner_RCFZ.jpg" alt="" style="width: 100%">
+			<img src="img/slides/banner_DJGZ.jpg" alt="" style="width: 100%">
 		</div>
 	</section>
 	<section id="content">
 		<div class="container contBoxs">
 			<div class="leftCont">
-				<div class="leftContTitle">人才发展</div>
+				<div class="leftContTitle">党建工作</div>
 				<ul class="nav leftContList" role="tablist">
 					<li role="presentation">
-						<a href="#rczl" class="rightContsTab" aria-controls="home" role="tab" data-toggle="tab"><div>人才战略</div></a>
+						<a href="#dflz" class="rightContsTab" aria-controls="home" role="tab" data-toggle="tab"><div>党风廉政</div></a>
 					</li>
 					<li role="presentation">
-						<a href="#zpxx" class="rightContsTab" aria-controls="profile" role="tab" data-toggle="tab"><div>招聘信息</div></a>
+						<a href="#djdt" class="rightContsTab" aria-controls="profile" role="tab" data-toggle="tab"><div>党建动态</div></a>
+					</li>
+					<li role="presentation">
+						<a href="#xxyd" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>学习园地</div></a>
 					</li>
 				</ul>
 			</div>
 			<div class="rightCont">
 				<div class="tab-content rightContList" style="padding: 0 5%;margin-top: 2%">
-					<div role="tabpanel" class="tab-pane active" id="rczl">
-						<h3>人才战略</h3>
-						<p>2019-08-18 16:37:00</p>
-						<p>长江云通集团坚持人才是支柱，把人才兴企作为战略，始终注重人才选用、考核、培育，实现管理队伍的充实壮大、销售队伍的优胜劣汰、技术队伍的日渐成熟，造就一支素质好、能力强、觉悟高的人才队伍，为集团发展提供了坚强的人才支撑。 集团尊重和保障员工的各项合法权益，为员工提供公平、公正、和谐的工作环境以及良好的职业发展平台和通道，对干部队伍，突出价值引领；对技术队伍，突出专业引领；对销售队伍，突出荣誉引领，加强各层次人才队伍建设，促进员工与集团共同发展，实现员工价值与企业价值的同步提升，努力把集团发展创新成果惠及广大员工，构建和谐的劳动关系。</p>
+					<div role="tabpanel" class="tab-pane active" id="dflz">
+						<ul id="dflzList"></ul>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="zpxx">
-						<div><h3>长江云通智慧城市科技有限公司招聘公告</h3><p>2020-06-24 08:54:03</p></div>
-						<div>
-							<p style="text-indent: 24px">长江云通智慧城市科技有限公司（以下简称“公司”）由长江云通集团有限公司和杭州阿里巴巴创业投资管理有限公司共同出资成立，注册资本5000万。公司经营范围包括智慧城市智能化系统工程施工；智慧城市项目设计、开发、建设、运营与管理；云计算、大数据和数据库的开发、建设、销售、运营等。</p>
-							<p>根据发展需要，公司现面向社会招聘引进相关岗位人才，具体安排如下：</p>
-							<p>（一）行政副总（1名）</p>
-							<p>岗位职责：协助总经理分管行政、人事、党群等相关工作。</p>
-							<p>任职资格：</p>
-							<p style="text-indent: 24px">1.中共党员优先，211/985本科以上学历；从事相关工作10年以上，类似岗位3年以上工作经历
-								2.具有丰富的行政、人事、党群工作经验；熟悉党内规章制度、现代企业管理体系和运营流程；熟悉公司组建、组织架构设置、定编定岗定员和管控体系建设等工作；有国有集团化企业工作经历。
-							</p>
-							<p>（二）销售副总（1名）</p>
-							<p>岗位职责：协助总经理分管销售相关工作。</p>
-							<p>任职资格：</p>
-							<p style="text-indent: 24px">1.中共党员优先，211/985本科以上学历；从事相关工作10年以上，类似岗位3年以上工作经历
-								2.具备优秀的政府客户开发能力；具备优秀方案设计能力，在复杂环境下达成客户满意度；了解政务业务、具备给政务客户提供有价值策略建议的能力；熟悉云计算、大数据基本知识，能够独立输出基本方案；熟练的销售技巧，丰富的落地实战经验；有大型系统交付经验者优先；良好的心态和抗压能力，优秀的沟通能力；丰富的团队管理经验。
-							</p>
-							<p>二、招聘程序</p>
-							<p>投放简历-简历筛选-组织面试-体检、背景调查-审核录用。</p>
-							<p>三、相关要求</p>
-							<p style="text-indent: 24px">请有意应聘者于6月30日中午12点前将个人简历发送至邮箱：hr@yuntongcloud.com。</p>
-						</div>
+					<div role="tabpanel" class="tab-pane" id="djdt">
+						<ul id="djdtList"></ul>
 					</div>
-
+					<div role="tabpanel" class="tab-pane" id="xxyd">
+						<ul id="xxydList"></ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+    </section>
+
+	</div>
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -218,7 +193,6 @@
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/jquery.fancybox-media.js"></script>  
 <script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script> 
 <!-- Vendor Scripts -->
 <script src="js/modernizr.custom.js"></script>
 <script src="js/jquery.isotope.min.js"></script>
@@ -226,7 +200,45 @@
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
 
- <script src="contact/jqBootstrapValidation.js"></script>
- <script src="contact/contact_me.js"></script>
+<script>
+	$(function(){
+		getXXGK();
+	});
+
+	function getXXGK(){
+		$.ajax({
+			type: "get",
+			dataType: "json",
+			cache: false,
+			async: true,
+			url: "json/djgz.json",
+			success: function (success) {
+				var _state = success.dflz;
+				var djdtData = success.djdt;
+				var xxydData = success.xxyd;
+				var ahtml="";
+				var bhtml="";
+				var chtml="";
+				for(var i=0;i<_state.length;i++){
+					ahtml += '<li><a href="projectsDetail.html"><h4>'+_state[i].title+'</h4><p>'+_state[i].detail+'</p><p>'+_state[i].time+'</p></a></li>'
+				}
+				$("#dflzList").html(ahtml);
+
+				for(var i=0;i<djdtData.length;i++){
+					bhtml += '<li><a href="projectsDetail.html"><h4>'+djdtData[i].title+'</h4><p>'+djdtData[i].detail+'</p><p>'+djdtData[i].time+'</p></a></li>'
+				}
+				$("#djdtList").html(bhtml);
+
+				for(var i=0;i<xxydData.length;i++){
+					chtml += '<li><a href="projectsDetail.html"><h4>'+xxydData[i].title+'</h4><p>'+xxydData[i].detail+'</p><p>'+xxydData[i].time+'</p></a></li>'
+				}
+				$("#xxydList").html(chtml);
+			},
+			error: function () {
+				console.log("！");
+			}
+		})
+	}
+</script>
 </body>
 </html>
