@@ -91,7 +91,7 @@
 								<li><a href="#">荣耀历程</a></li>
 							</ul>
 						</li>
-						<li class="active">
+						<li>
 							<a href="#" data-toggle="dropdown" class="dropdown-toggle">新闻中心<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="projects.html">国资要闻</a></li>
@@ -110,7 +110,7 @@
 						</li>
 						<li><a href="contact.html">人才发展</a></li>
 						<li><a href="contact.html">党建工作</a></li>
-						<li>
+						<li class="active">
 							<a href="discloseInformation.html" data-toggle="dropdown" class="dropdown-toggle">信息公开<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="discloseInformation.html">经营管理</a></li>
@@ -130,47 +130,60 @@
 
 	<section id="inner-headline">
 		<div style="width: 100%;">
-			<img src="img/slides/banner_XWZX.jpg" alt="" style="width: 100%">
+			<img src="img/slides/banner_XXGK.jpg" alt="" style="width: 100%">
 		</div>
 	</section>
 	<section id="content">
 		<div class="container contBoxs">
 			<div class="leftCont">
-				<div class="leftContTitle">新闻中心</div>
+				<div class="leftContTitle">信息公开</div>
 				<ul class="nav leftContList" role="tablist">
 					<li role="presentation">
-						<a href="#guozi" class="rightContsTab" aria-controls="home" role="tab" data-toggle="tab"><div>国资要闻</div></a>
+						<a href="#jygl" class="rightContsTab" aria-controls="home" role="tab" data-toggle="tab"><div>经营管理</div></a>
 					</li>
 					<li role="presentation">
-						<a href="#jituan" class="rightContsTab" aria-controls="profile" role="tab" data-toggle="tab"><div>集团要闻</div></a>
+						<a href="#zdsx" class="rightContsTab" aria-controls="profile" role="tab" data-toggle="tab"><div>重大事项</div></a>
 					</li>
 					<li role="presentation">
-						<a href="#qiye" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>企业动态</div></a>
+						<a href="#rsxx" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>人事信息</div></a>
 					</li>
 					<li role="presentation">
-						<a href="#meiti" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>媒体聚焦</div></a>
+						<a href="#shzr" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>社会责任</div></a>
+					</li>
+					<li role="presentation">
+						<a href="#zbgg" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>招标公告</div></a>
+					</li>
+					<li role="presentation">
+						<a href="#zxgs" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>中选公示</div></a>
 					</li>
 				</ul>
 			</div>
 			<div class="rightCont">
 				<div class="tab-content rightContList" style="padding: 0 5%;margin-top: 2%">
-					<div role="tabpanel" class="tab-pane active" id="guozi">
-						<ul id="gzywList"></ul>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="jituan">
-						<ul id="jtywList"></ul>
-					</div>
-					<div role="tabpanel" class="tab-pane" id="qiye">
+					<div role="tabpanel" class="tab-pane active" id="jygl">
 						建设中
 					</div>
-					<div role="tabpanel" class="tab-pane" id="meiti">
-						<ul id="mtjjList"></ul>
+					<div role="tabpanel" class="tab-pane" id="zdsx">
+						建设中
 					</div>
+					<div role="tabpanel" class="tab-pane" id="rsxx">
+						建设中
+					</div>
+					<div role="tabpanel" class="tab-pane" id="shzr">
+						建设中
+					</div>
+					<div role="tabpanel" class="tab-pane" id="zbgg">
+						<ul id="zbggList"></ul>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="zxgs">
+						<ul id="zxgsList"></ul>
+					</div>
+
 				</div>
 			</div>
 		</div>
     </section>
-    <!--// End Gallery 1-2 -->  
+
 	</div>
 	<footer>
 		<div class="container">
@@ -181,9 +194,7 @@
 	</footer>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<!-- javascript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -199,37 +210,30 @@
 
 <script>
 	$(function(){
-		getXWZX();
+		getXXGK();
 	});
 
-	function getXWZX(){
+	function getXXGK(){
 		$.ajax({
 			type: "get",
 			dataType: "json",
 			cache: false,
 			async: true,
-			url: "json/xwzx.json",
+			url: "json/xxgk.json",
 			success: function (success) {
-				var _state = success.gzyw;
-				var jtywData = success.jtyw;
-				var mtjjData = success.mtjj;
+				var _state = success.zbgg;
+				var zxgsData = success.zxgs;
 				var ahtml="";
 				var bhtml="";
-				var chtml="";
 				for(var i=0;i<_state.length;i++){
-					ahtml += '<li><a href="projectsDetail.html"><h4>'+_state[i].title+'</h4><p>'+_state[i].detail+'</p><p>'+_state[i].time+'</p></a></li>'
+					ahtml += '<li><a href="projectsDetail.html"><h4>'+_state[i].title+'</h4><p>'+_state[i].time+'</p></a></li>'
 				}
-				$("#gzywList").html(ahtml);
+				$("#zbggList").html(ahtml);
 
-				for(var i=0;i<jtywData.length;i++){
-					bhtml += '<li><a href="projectsDetail.html"><h4>'+jtywData[i].title+'</h4><p>'+jtywData[i].detail+'</p><p>'+jtywData[i].time+'</p></a></li>'
+				for(var i=0;i<zxgsData.length;i++){
+					bhtml += '<li><a href="projectsDetail.html"><h4>'+zxgsData[i].title+'</h4><p>'+zxgsData[i].time+'</p></a></li>'
 				}
-				$("#jtywList").html(bhtml);
-
-				for(var i=0;i<mtjjData.length;i++){
-					chtml += '<li><a href="projectsDetail.html"><h4>'+mtjjData[i].title+'</h4><p>'+mtjjData[i].detail+'</p><p>'+mtjjData[i].time+'</p></a></li>'
-				}
-				$("#mtjjList").html(chtml);
+				$("#zxgsList").html(bhtml);
 			},
 			error: function () {
 				console.log("！");
