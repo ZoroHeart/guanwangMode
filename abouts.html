@@ -9,65 +9,13 @@
 <!-- css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" />
 <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
 <link href="css/flexslider.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
- 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<style>
-		.contBoxs{
-			display: flex;
-			flex-wrap: nowrap;
-			justify-content: space-around;
-		}
-		.leftCont{
-			width: 25%;
-			height: 400px;
-		}
-		.leftContTitle{
-			font-size: 24px;
-			font-weight: 600;
-			padding-bottom: 20px;
-			padding-left: 10px;
-			border-bottom: 1.5px solid #e2e2e2;
-			color: #ff9818;
-		}
-		.leftContList{
-			margin-top: 10px;
-		}
-		a{
-			color: #6e6e6e;
-		}
-		a:hover, a:focus{
-			color: #EB6622;
-			text-decoration: none;
 
-		}
-		.rightCont{
-			width: 67%;
-			margin-top: 20px;
-		}
-		.rightContList ul li{
-			background: #f4f4f4;
-			padding: 20px 20px 10px 20px;
-			margin-bottom: 15px;
-		}
-		.zyywContCss{
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-		}
-		.zyywContCss li{
-			width: 33%;
-			background: #fff!important;
-		}
-		.zyywContCss li img{
-			width: 100%;
-		}
-	</style>
 </head>
 <body>
 <div id="wrapper">
@@ -88,7 +36,7 @@
 				<div class="navbar-collapse collapse ">
 					<ul class="nav navbar-nav">
 						<li><a href="index.html">首页</a></li>
-						<li class="dropdown"><a href="abouts.html">关于我们</a></li>
+						<li class="dropdown active"><a href="abouts.html">关于我们</a></li>
 						<li>
 							<a href="#" data-toggle="dropdown" class="dropdown-toggle">新闻中心<b class="caret"></b></a>
 							<ul class="dropdown-menu">
@@ -98,7 +46,7 @@
 								<li><a href="projects.html">媒体聚焦</a></li>
 							</ul>
 						</li>
-						<li class="active">
+						<li>
 							<a href="pricing.html" data-toggle="dropdown" class="dropdown-toggle">产业布局<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="pricing.html">主营业务</a></li>
@@ -106,11 +54,13 @@
 								<li><a href="pricing.html">产品展示</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html" data-toggle="dropdown" class="dropdown-toggle">人才发展<b class="caret"></b></a>
+						<li>
+							<a href="contact.html" data-toggle="dropdown" class="dropdown-toggle">人才发展<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="contact.html">人才战略</a></li>
 								<li><a href="contact.html">招聘信息</a></li>
-							</ul></li>
+							</ul>
+						</li>
 						<!--<li><a href="djgz.html" data-toggle="dropdown" class="dropdown-toggle">党建工作<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="djgz.html">党风廉政</a></li>
@@ -137,49 +87,44 @@
 
 	<section id="inner-headline">
 		<div style="width: 100%;">
-			<img src="img/slides/banner_CYBJ.jpg" alt="" style="width: 100%">
+			<img src="img/slides/gywm.jpg" alt="" style="width: 100%">
 		</div>
 	</section>
 	<section id="content">
-		<div class="container contBoxs">
-			<div class="leftCont">
-				<div class="leftContTitle">产业布局</div>
-				<ul class="nav leftContList" role="tablist">
-					<li role="presentation">
-						<a href="#zyyw" class="rightContsTab" aria-controls="home" role="tab" data-toggle="tab"><div>主营业务</div></a>
-					</li>
-					<li role="presentation">
-						<a href="#cydt" class="rightContsTab" aria-controls="profile" role="tab" data-toggle="tab"><div>产业动态</div></a>
-					</li>
-					<li role="presentation">
-						<a href="#cpzs" class="rightContsTab" aria-controls="messages" role="tab" data-toggle="tab"><div>产品展示</div></a>
-					</li>
-				</ul>
-			</div>
-			<div class="rightCont">
-				<div class="tab-content rightContList" style="padding: 0 5%;margin-top: 2%">
-					<div role="tabpanel" class="tab-pane active" id="zyyw">
-						<ul class="zyywContCss">
-							<li><img src="img/works/szcs.png" alt=""></li>
-							<li><img src="img/works/yjs.png" alt=""></li>
-							<li><img src="img/works/rgzn.png" alt=""></li>
-							<li><img src="img/works/zhjt.png" alt=""></li>
-							<li><img src="img/works/zhzl.png" alt=""></li>
-							<li><img src="img/works/yjy.png" alt=""></li>
-							<li><img src="img/works/hlw.png" alt=""></li>
-							<li><img src="img/works/wlaq.png" alt=""></li>
-						</ul>
+
+	<div class="container">
+		<div class="about"/>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="about-text">
+					<h3><span>长江云通智慧城市科技有限公司</span></h3>
+						<p>长江云通智慧城市科技有限公司（以下简称“公司”）成立于2020
+							年6月，是长江云通集团有限公司（以下简称“云通集团”）与阿里
+							巴巴集团（以下简称“阿里”）共同出资组建的从事云计算、大数据、
+							物联网、人工智能等相关业务，专注于城市大脑研发、投资、设计、
+							建设、管理和运营的市属国资控股企业。
+							作为云通集团智慧城市板块的主力军，公司充分整合集团及各
+							分子公司的能力，在城市通卡、交通、运输、物流、卫健、公安等领
+							域具备丰富的建设和运营经验。
+							作为阿里巴巴集团投资湖北的重要项目，公司依托阿里强大的
+							经济体资源和领先的科技能力，充分运用阿里云智能、蚂蚁金服、高
+							德、钉钉、达摩院等技术能力，整合淘宝、天猫、饿了么、口碑、优
+							酷、虾米、大麦等线上资源，结合菜鸟、盒马、银泰、居然之家、大
+							润发等线下实体，为各级政府的数字化转型和智慧城市建设提供先进
+							的可落地可运营的投资、建设、运营综合解决方案。</p>
+
+
 					</div>
-					<div role="tabpanel" class="tab-pane" id="cydt">
-						建设中
-					</div>
-					<div role="tabpanel" class="tab-pane" id="cpzs">
-						建设中
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="about-image">
+						<img src="img/about.jpg" alt="About Images">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -189,11 +134,12 @@
 	</footer>
 </div>
 
+<!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script>  
+<script src="js/jquery.fancybox-media.js"></script> 
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
 <!-- Vendor Scripts -->

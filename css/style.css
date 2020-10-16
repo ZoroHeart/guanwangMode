@@ -532,6 +532,7 @@ section.hero-text h1{
 	position:relative;
 	background:#fff;
 	padding:50px 0 0px 0;
+	min-height: 600px;
 }
  
 .cta-text {
@@ -1269,8 +1270,13 @@ footer .widget .flickr_badge img {
 footer{
 	padding:20px 0 0 0;
 	color: #8c8c8c;
+	position: static;
+	bottom: 0;
+	width: 100%;
 }
-
+footer .container{
+	text-align: center;
+}
 footer a {
 	color: #bbb;
 }
